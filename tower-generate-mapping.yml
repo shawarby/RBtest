@@ -1,0 +1,6 @@
+---
+  -name: Run generate-mapping on Riyadh
+  hosts: all
+  tasks:
+    - name: Run Disaster Recovery Playbook.
+    command: ansible-playbook dr-rhv-setup.yml --tags "generate_mapping"

@@ -1,0 +1,6 @@
+---
+  -name: Run Failover from Riyadh
+  hosts: all
+  tasks:
+    - name: Run Disaster Recovery Playbook.
+    command: ansible-playbook failover-riyadh-dammam.yml --tags "fail_over"

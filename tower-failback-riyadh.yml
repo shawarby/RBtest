@@ -1,0 +1,9 @@
+---
+  -name: Run Failback from Riyadh
+  hosts: all
+  tasks:
+    - name: Run Cleanup Riyadh.
+    command: ansible-playbook riyadh-cleanup.yml --tags "clean_engine"
+
+    -name: Run Failback Playbook.
+    command: ansible-playbook failback-dammam-riyadh.yml --tags "fail_back"
